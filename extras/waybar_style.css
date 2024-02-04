@@ -1,0 +1,262 @@
+/* Keyframes */
+
+@keyframes blink-critical {
+	to {
+		/*color: @white;*/
+		background-color: @critical;
+	}
+}
+
+
+/* Styles */
+
+/* Colors (lituus) */
+@define-color black	#202020;
+@define-color red	#ed0f1c;
+@define-color green	#3dff0d;
+@define-color yellow	#ffa919;
+@define-color blue	#0072f2;
+@define-color purple	#4da5ff;
+@define-color cyan	#0dfff8;
+@define-color gray	#969696;
+@define-color brgray	#8c8c8c;
+@define-color brred	#ff3542;
+@define-color brgreen	#80ff50;
+@define-color bryellow	#f6eb84;
+@define-color brblue	#59cce2;
+@define-color brpurple	#4098f2;
+@define-color brcyan	#0dfff8;
+@define-color white	#dddddd;
+@define-color bg2	#333333;
+
+
+@define-color warning 	@bryellow;
+@define-color critical	@red;
+@define-color mode	@black;
+@define-color unfocused	@bg2;
+@define-color focused	@brcyan;
+@define-color inactive	@purple;
+@define-color sound	@brpurple;
+@define-color network	@purple;
+@define-color memory	@brcyan;
+@define-color cpu	@green;
+@define-color temp	@brgreen;
+@define-color layout	@brblue;
+@define-color battery	@cyan;
+@define-color date	@black;
+@define-color time	@white;
+
+/* Reset all styles */
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+	background: @black;
+	color: @white;
+	/* font-family: Terminus, Siji; */
+  font-family: MesloLGS NF, Noto sans, sans-serif;
+	font-size: 10pt;
+	/*font-weight: bold;*/
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#language,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#custom-alsa,
+#sndio,
+#tray {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Each critical module */
+#mode,
+#memory.critical,
+#cpu.critical,
+#temperature.critical,
+#battery.critical.discharging {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-name: blink-critical;
+	animation-duration: 1s;
+}
+
+/* Each warning */
+#network.disconnected,
+#memory.warning,
+#cpu.warning,
+#temperature.warning,
+#battery.warning.discharging {
+	color: @warning;
+}
+
+/* And now modules themselves in their respective order */
+
+/* Current sway mode (resize etc) */
+#mode {
+	color: @white;
+	background: @mode;
+}
+
+/* Workspaces stuff */
+#workspaces button {
+	/*font-weight: bold;*/
+	padding-left: 2px;
+	padding-right: 2px;
+	color: @white;
+	background: @unfocused;
+}
+
+/* Inactive (on unfocused output) */
+#workspaces button.visible {
+	color: @white;
+	background: @inactive;
+}
+
+/* Active (on focused output) */
+#workspaces button.focused {
+	color: @black;
+	background: @focused;
+}
+
+#workspaces button.urgent {
+	color: @black;
+	background: @warning;
+}
+
+#window {
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+#custom-alsa,
+#pulseaudio,
+#sndio {
+	background: @sound;
+	color: @black;
+}
+
+#network {
+	background: @network;
+	color: @white;
+}
+
+#memory {
+	background: @memory;
+	color: @black;
+}
+
+#cpu {
+	background: @cpu;
+	color: @black;
+}
+
+#temperature {
+	background: @temp;
+	color: @black;
+}
+
+#language {
+	background: @layout;
+	color: @black;
+}
+
+#battery {
+	background: @battery;
+	color: @black;
+}
+
+#tray {
+	background: @date;
+}
+
+#clock.date {
+	background: @date;
+	color: @white;
+}
+
+#clock.time {
+	background: @time;
+	color: @black;
+}
+
+#custom-recorder {
+	font-size: 20px;
+	color: @red;
+	background: transparent;
+}
+
+#custom-arrow1 {
+	font-size: 20px;
+	color: @sound;
+	background: transparent;
+}
+
+#custom-arrow2 {
+	font-size: 20px;
+	color: @network;
+	background: @sound;
+}
+
+#custom-arrow3 {
+	font-size: 20px;
+	color: @memory;
+	background: @network;
+}
+
+#custom-arrow4 {
+	font-size: 20px;
+	color: @cpu;
+	background: @memory;
+}
+
+#custom-arrow5 {
+	font-size: 20px;
+	color: @temp;
+	background: @cpu;
+}
+
+#custom-arrow6 {
+	font-size: 20px;
+	color: @battery;
+	background: @temp;
+}
+
+#custom-arrow7 {
+	font-size: 20px;
+	color: @layout;
+	background: @battery;
+}
+
+#custom-arrow8 {
+	font-size: 20px;
+	color: @date;
+	background: @layout;
+}
+
+#custom-arrow9 {
+	font-size: 20px;
+	color: @time;
+	background: @date;
+}
+
+#custom-arrow10 {
+	font-size: 20px;
+	color: @unfocused;
+	background: transparent;
+}
+
