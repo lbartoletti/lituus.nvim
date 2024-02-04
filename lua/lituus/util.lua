@@ -1,4 +1,4 @@
-local ts = require("cyberdream.treesitter")
+local ts = require("lituus.treesitter")
 local M = {}
 
 function M.highlight(group, hl)
@@ -33,7 +33,7 @@ function M.load(theme)
     end
 
     vim.o.termguicolors = true
-    vim.g.colors_name = "cyberdream"
+    vim.g.colors_name = "lituus"
 
     if ts.new_style() then
         for group, colors in pairs(ts.defaults) do

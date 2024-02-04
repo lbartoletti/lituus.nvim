@@ -1,8 +1,8 @@
-local colors = require("cyberdream.colors")
+local colors = require("lituus.colors")
 
 local M = {}
 function M.setup()
-    local config = require("cyberdream.config")
+    local config = require("lituus.config")
     local opts = config.options
 
     local theme = {}

@@ -1,12 +1,12 @@
-*cyberdream.txt*        For Neovim >= 0.9.0       Last change: 2024 January 16
+*lituus.txt*        For Neovim >= 0.9.0       Last change: 2024 January 16
 
 ==============================================================================
-Table of Contents                               *cyberdream-table-of-contents*
+Table of Contents                               *lituus-table-of-contents*
 
-  - Features                                             |cyberdream-features|
-  - Installation                                     |cyberdream-installation|
-  - Configuring                                       |cyberdream-configuring|
-  - Contributing                                     |cyberdream-contributing|
+  - Features                                             |lituus-features|
+  - Installation                                     |lituus-installation|
+  - Configuring                                       |lituus-configuring|
+  - Contributing                                     |lituus-contributing|
 
 A high-contrast, futuristic & vibrant theme for neovim
 
@@ -17,7 +17,7 @@ A high-contrast, futuristic & vibrant theme for neovim
 
 
 
-FEATURES                                                 *cyberdream-features*
+FEATURES                                                 *lituus-features*
 
 - **Transparency-first design** - all design decisions are made with transparency in mind
 - **High contrast** - Colours have been carefully chosen to be cohesive and easy on the eyes while still being easy to distinguish
@@ -25,24 +25,24 @@ FEATURES                                                 *cyberdream-features*
 Supported Plugins ~
 
  alpha-nvim lazy.nvim leap.nvim lualine.nvim nvim-cmp nvim-treesitter telescope.nvim which-key.nvim
-INSTALLATION                                         *cyberdream-installation*
+INSTALLATION                                         *lituus-installation*
 
 Lazy:
 
 >lua
     {
-        "scottmckendry/cyberdream.nvim",
+        "scottmckendry/lituus.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            require("cyberdream").setup({
+            require("lituus").setup({
                 -- Recommended - see "Configuring" below for more config options
                 transparent = true,
                 italic_comments = true,
                 hide_fillchars = true,
                 borderless_telescope = true,
             })
-            vim.cmd("colorscheme cyberdream") -- set the colorscheme
+            vim.cmd("colorscheme lituus") -- set the colorscheme
         end,
     }
 <
@@ -51,11 +51,11 @@ Lualine (optional):
 
 >lua
     {
-        local cyberdream = require("lualine.themes.cyberdream")
+        local lituus = require("lualine.themes.lituus")
         require("lualine").setup({
             -- ... other config
             options = {
-                theme = "cyberdream",
+                theme = "lituus",
             },
             -- ... other config
         })
@@ -67,12 +67,12 @@ See my personal lualine config here
 for an example.
 
 
-CONFIGURING                                           *cyberdream-configuring*
+CONFIGURING                                           *lituus-configuring*
 
 Below is an example of all the available configuration options:
 
 >lua
-    require("cyberdream").setup({
+    require("lituus").setup({
         -- Enable transparent background
         transparent = true, -- Default: false
     
@@ -93,12 +93,12 @@ Below is an example of all the available configuration options:
                 -- Example:
                 Comment = { fg = "#696969", bg = "NONE", italic = true },
     
-                -- Complete list can be found in `lua/cyberdream/theme.lua`
+                -- Complete list can be found in `lua/lituus/theme.lua`
             },
     
             -- Override a color entirely
             colors = {
-                -- For a list of colors see `lua/cyberdream/colours.lua`
+                -- For a list of colors see `lua/lituus/colours.lua`
                 -- Example:
                 bg = "#000000",
                 green = "#00ff00",
@@ -109,16 +109,16 @@ Below is an example of all the available configuration options:
 <
 
 
-CONTRIBUTING                                         *cyberdream-contributing*
+CONTRIBUTING                                         *lituus-contributing*
 
 Pull requests are welcome. If a plugin you use is not supported, please open an
 issue and I’ll try to add support for it. If you have any suggestions or
 feedback, please open an issue.
 
 ==============================================================================
-1. Links                                                    *cyberdream-links*
+1. Links                                                    *lituus-links*
 
-1. *cyberdream-screenshot*: https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/18004b97-8677-4ec1-afb8-76ea5c49a7bd
+1. *lituus-screenshot*: https://github.com/scottmckendry/lituus.nvim/assets/39483124/18004b97-8677-4ec1-afb8-76ea5c49a7bd
 
 Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
 

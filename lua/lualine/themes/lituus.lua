@@ -1,12 +1,12 @@
-local colors = require("cyberdream.colors").default
-local opts = require("cyberdream.config").options
-local cyberdream = {}
+local colors = require("lituus.colors").default
+local opts = require("lituus.config").options
+local lituus = {}
 
 if opts.transparent then
     colors.bg = "NONE"
 end
 
-cyberdream.normal = {
+lituus.normal = {
     a = { fg = colors.blue, bg = colors.bg },
     b = { fg = colors.cyan, bg = colors.bg },
     c = { fg = colors.fg, bg = colors.bg },
@@ -14,17 +14,17 @@ cyberdream.normal = {
     y = { fg = colors.magenta, bg = colors.bg },
     z = { fg = colors.grey, bg = colors.bg },
 }
-cyberdream.insert = {
+lituus.insert = {
     a = { fg = colors.green, bg = colors.bg },
     z = { fg = colors.grey, bg = colors.bg },
 }
-cyberdream.visual = {
+lituus.visual = {
     a = { fg = colors.magenta, bg = colors.bg },
     z = { fg = colors.grey, bg = colors.bg },
 }
-cyberdream.terminal = {
+lituus.terminal = {
     a = { fg = colors.orange, bg = colors.bg },
     z = { fg = colors.grey, bg = colors.bg },
 }
 
-return cyberdream
+return lituus

@@ -1,17 +1,17 @@
 <p align="center">
-    <img src="https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/e758f47a-32eb-4eac-a008-eb59272badef">
+    <img src="https://github.com/scottmckendry/lituus.nvim/assets/39483124/e758f47a-32eb-4eac-a008-eb59272badef">
      <b><i>A high-contrast, futuristic & vibrant theme for neovim</i></b>
 </p>
 
 <p align="center">
-    <a href="https://github.com/scottmckendry/cyberdream.nvim/issues">
-        <img alt="Issues" src="https://img.shields.io/github/issues/scottmckendry/cyberdream.nvim?style=for-the-badge&logo=github&color=%23ffbd5e">
+    <a href="https://github.com/scottmckendry/lituus.nvim/issues">
+        <img alt="Issues" src="https://img.shields.io/github/issues/scottmckendry/lituus.nvim?style=for-the-badge&logo=github&color=%23ffbd5e">
     </a>
-    <a href="https://github.com/scottmckendry/cyberdream.nvim/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/github/license/scottmckendry/cyberdream.nvim?style=for-the-badge&logo=github&color=%235ef1ff">
+    <a href="https://github.com/scottmckendry/lituus.nvim/blob/main/LICENSE">
+        <img alt="License" src="https://img.shields.io/github/license/scottmckendry/lituus.nvim?style=for-the-badge&logo=github&color=%235ef1ff">
     </a>
-    <a href="https://github.com/scottmckendry/cyberdream.nvim/stars">
-        <img alt="stars" src="https://img.shields.io/github/stars/scottmckendry/cyberdream.nvim?style=for-the-badge&logo=github&color=%23bd5eff">
+    <a href="https://github.com/scottmckendry/lituus.nvim/stars">
+        <img alt="stars" src="https://img.shields.io/github/stars/scottmckendry/lituus.nvim?style=for-the-badge&logo=github&color=%23bd5eff">
     </a>
 </p>
 
@@ -34,7 +34,7 @@
     </ul>
 </details>
 
-![cyberdream-screenshot](https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/18004b97-8677-4ec1-afb8-76ea5c49a7bd)
+![lituus-screenshot](https://github.com/scottmckendry/lituus.nvim/assets/39483124/18004b97-8677-4ec1-afb8-76ea5c49a7bd)
 
 ## 📦 Installation
 
@@ -42,18 +42,18 @@ Lazy:
 
 ```lua
 {
-    "scottmckendry/cyberdream.nvim",
+    "scottmckendry/lituus.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-        require("cyberdream").setup({
+        require("lituus").setup({
             -- Recommended - see "Configuring" below for more config options
             transparent = true,
             italic_comments = true,
             hide_fillchars = true,
             borderless_telescope = true,
         })
-        vim.cmd("colorscheme cyberdream") -- set the colorscheme
+        vim.cmd("colorscheme lituus") -- set the colorscheme
     end,
 }
 ```
@@ -62,11 +62,11 @@ Lualine (optional):
 
 ```lua
 {
-    local cyberdream = require("lualine.themes.cyberdream")
+    local lituus = require("lualine.themes.lituus")
     require("lualine").setup({
         -- ... other config
         options = {
-            theme = "cyberdream",
+            theme = "lituus",
         },
         -- ... other config
     })
@@ -80,7 +80,7 @@ See my personal lualine config [here](https://github.com/scottmckendry/Windots/b
 Below is an example of all the available configuration options:
 
 ```lua
-require("cyberdream").setup({
+require("lituus").setup({
     -- Enable transparent background
     transparent = true, -- Default: false
 
@@ -101,12 +101,12 @@ require("cyberdream").setup({
             -- Example:
             Comment = { fg = "#696969", bg = "NONE", italic = true },
 
-            -- Complete list can be found in `lua/cyberdream/theme.lua`
+            -- Complete list can be found in `lua/lituus/theme.lua`
         },
 
         -- Override a color entirely
         colors = {
-            -- For a list of colors see `lua/cyberdream/colours.lua`
+            -- For a list of colors see `lua/lituus/colours.lua`
             -- Example:
             bg = "#000000",
             green = "#00ff00",
